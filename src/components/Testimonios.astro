@@ -1,0 +1,75 @@
+---
+const testimonios = [
+  { nombre: 'María González', origen: 'Santo Domingo, RD', texto_es: 'Increíble experiencia. Cocotal Travel nos organizó todo desde el hotel hasta las excursiones. La atención fue impecable, siempre disponibles por WhatsApp. Definitivamente regresamos.', texto_en: 'Incredible experience. Cocotal Travel organized everything from the hotel to excursions. The service was impeccable, always available on WhatsApp. We will definitely return.', rating: 5, avatar: 'MG', color: 'bg-brand-orange', excursion: 'Isla Saona + Hard Rock Hotel' },
+  { nombre: 'Carlos Méndez', origen: 'Medellín, Colombia', texto_es: 'El precio fue mucho mejor que lo que encontré en otros sitios. Nos consiguieron habitación frente al mar cuando ya no había disponibilidad online. ¡Son magos!', texto_en: 'The price was much better than anything I found elsewhere. They got us a beachfront room when there was no availability online. They are magicians!', rating: 5, avatar: 'CM', color: 'bg-brand-blue', excursion: 'Barceló Bávaro + Buggy Tour' },
+  { nombre: 'Andreína Rivas', origen: 'Caracas, Venezuela', texto_es: 'Viajé sola por primera vez y me sentí muy segura con el servicio de Cocotal Travel. Me esperaban en el aeropuerto, me llevaron al hotel y coordinaron todas mis actividades.', texto_en: 'I traveled alone for the first time and felt very safe with Cocotal Travel. They waited for me at the airport, took me to the hotel and coordinated all my activities.', rating: 5, avatar: 'AR', color: 'bg-emerald-500', excursion: 'Majestic Elegance + Catamaran' },
+  { nombre: 'Roberto y Ana Lima', origen: 'Lima, Perú', texto_es: 'Luna de miel perfecta. Cocotal Travel cuidó cada detalle: decoración en la habitación, cena romántica en la playa y excursión privada. ¡Todo superó nuestras expectativas!', texto_en: 'Perfect honeymoon. Cocotal Travel took care of every detail: room decoration, romantic beach dinner and a private excursion. Everything exceeded our expectations!', rating: 5, avatar: 'RL', color: 'bg-pink-500', excursion: 'Royalton Splash + Safari' },
+  { nombre: 'Juan Familia', origen: 'Nueva York, USA', texto_es: 'Vacaciones familiares con tres niños y todo salió perfecto. Nos recomendaron el hotel ideal para familias y las excursiones más adecuadas para los chicos. Muy profesionales.', texto_en: 'Family vacation with three kids and everything was perfect. They recommended the ideal family hotel and the most suitable excursions for the children. Very professional.', rating: 5, avatar: 'JF', color: 'bg-purple-500', excursion: 'Iberostar + Delfines' },
+  { nombre: 'Daniela Torres', origen: 'Bogotá, Colombia', texto_es: 'La atención post-venta es lo mejor. Hubo un cambio de vuelo y Cocotal Travel gestionó todo el ajuste del hotel sin cobrarme recargo adicional. Eso no lo hace cualquier agencia.', texto_en: 'The after-sales service is the best. There was a flight change and Cocotal Travel handled the entire hotel adjustment without charging me any extra. Not every agency does that.', rating: 5, avatar: 'DT', color: 'bg-cyan-600', excursion: 'Sirenis Cocotal + Santo Domingo' },
+]
+---
+
+<section id="testimonios" class="py-14 sm:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-8 sm:mb-12 gap-2 sm:gap-3">
+      <div class="flex items-center gap-3">
+        <div class="h-px w-10 bg-brand-blue"></div>
+        <span data-i18n="test_tag" class="text-[10px] font-black uppercase tracking-widest text-brand-blue">Clientes felices</span>
+        <div class="h-px w-10 bg-brand-blue"></div>
+      </div>
+      <h2 data-i18n="test_title" class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+        Lo Que Dicen de Nosotros
+      </h2>
+      <div class="flex items-center gap-2">
+        <div class="flex">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 fill-amber-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          ))}
+        </div>
+        <span data-i18n="test_reviews" class="text-slate-500 dark:text-slate-400 font-black text-xs sm:text-sm">4.9/5 · +500 reseñas</span>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+      {testimonios.map(({ nombre, origen, texto_es, texto_en, rating, avatar, color, excursion }) => (
+        <div class="bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3 sm:gap-4">
+          <div class="flex">
+            {Array(rating).fill(null).map(() => (
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 fill-amber-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p data-txt-es={texto_es} data-txt-en={texto_en}
+            class="test-txt text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-medium leading-relaxed flex-1">
+            "{texto_es}"
+          </p>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-700">
+            <div class={`${color} w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-black text-xs shrink-0`}>
+              {avatar}
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="font-black text-slate-900 dark:text-white text-sm">{nombre}</div>
+              <div class="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400">{origen}</div>
+            </div>
+            <div class="text-right shrink-0">
+              <div data-i18n="test_booked" class="text-[9px] font-black uppercase tracking-widest text-slate-300">Reservó</div>
+              <div class="text-[10px] font-bold text-brand-blue">{excursion}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  function updateTest(lang: string) {
+    document.querySelectorAll<HTMLElement>('.test-txt').forEach(el => {
+      const txt = lang === 'en' ? el.dataset.txtEn! : el.dataset.txtEs!
+      el.textContent = `"${txt}"`
+    })
+  }
+  document.addEventListener('DOMContentLoaded', () => updateTest(localStorage.getItem('lang') || 'es'))
+  document.addEventListener('langChange', (e: Event) => updateTest((e as CustomEvent).detail))
+</script>

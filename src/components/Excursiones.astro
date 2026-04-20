@@ -1,0 +1,199 @@
+---
+const excursiones = [
+  {
+    nombre: 'Isla Saona',
+    dur_es: 'Día completo · 8h',
+    dur_en: 'Full day · 8h',
+    desc_es: 'La excursión más popular de Punta Cana. Visita la paradisíaca isla con piscina natural, almuerzo en la playa y open bar.',
+    desc_en: "Punta Cana's most popular excursion. Visit the paradise island with natural pool, beach lunch and open bar.",
+    precio: '$75 USD',
+    imagen: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+    badge_es: 'Más Popular',
+    badge_en: 'Most Popular',
+    badgeColor: 'bg-brand-orange',
+    inc_es: ['Transporte', 'Almuerzo', 'Open Bar', 'Snorkeling'],
+    inc_en: ['Transport', 'Lunch', 'Open Bar', 'Snorkeling'],
+  },
+  {
+    nombre: 'Buggy & Cenote',
+    dur_es: 'Medio día · 4h',
+    dur_en: 'Half day · 4h',
+    desc_es: 'Aventura en buggy por senderos de selva dominicana. Baño en cenote natural y pueblo típico de La Otra Banda.',
+    desc_en: 'Buggy adventure through Dominican jungle trails. Swim in a natural cenote and visit a typical village.',
+    precio: '$65 USD',
+    imagen: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    badge_es: 'Aventura',
+    badge_en: 'Adventure',
+    badgeColor: 'bg-emerald-500',
+    inc_es: ['Buggy', 'Cenote', 'Guía', 'Transporte'],
+    inc_en: ['Buggy', 'Cenote', 'Guide', 'Transport'],
+  },
+  {
+    nombre: 'Safari & Cascadas',
+    dur_es: 'Día completo · 9h',
+    dur_en: 'Full day · 9h',
+    desc_es: 'Recorre el campo dominicano en jeep 4x4, visita plantaciones de cacao, cascadas naturales y un pueblo rural auténtico.',
+    desc_en: 'Explore the Dominican countryside in a 4x4 jeep, visit cacao plantations, natural waterfalls and an authentic rural village.',
+    precio: '$80 USD',
+    imagen: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80',
+    badge_es: 'Naturaleza',
+    badge_en: 'Nature',
+    badgeColor: 'bg-green-600',
+    inc_es: ['Jeep 4x4', 'Almuerzo', 'Guía', 'Cascadas'],
+    inc_en: ['Jeep 4x4', 'Lunch', 'Guide', 'Waterfalls'],
+  },
+  {
+    nombre: 'Catamaran Sunset',
+    dur_es: 'Tarde · 3h',
+    dur_en: 'Afternoon · 3h',
+    desc_es: 'Navega al atardecer en catamarán de lujo por las aguas cristalinas del Caribe. Snorkeling, open bar y música en vivo.',
+    desc_en: 'Sail at sunset on a luxury catamaran through crystal Caribbean waters. Snorkeling, open bar and live music.',
+    precio: '$70 USD',
+    imagen: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    badge_es: 'Romántico',
+    badge_en: 'Romantic',
+    badgeColor: 'bg-pink-500',
+    inc_es: ['Catamarán', 'Open Bar', 'Snorkeling', 'Música'],
+    inc_en: ['Catamaran', 'Open Bar', 'Snorkeling', 'Music'],
+  },
+  {
+    nombre: 'Delfines & Tiburones',
+    dur_es: 'Medio día · 3h',
+    dur_en: 'Half day · 3h',
+    desc_es: 'Nada con delfines en Marinarium, observa tiburones nodriza y peces tropicales en su hábitat natural.',
+    desc_en: 'Swim with dolphins at Marinarium, observe nurse sharks and tropical fish in their natural habitat.',
+    precio: '$90 USD',
+    imagen: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80',
+    badge_es: 'Familia',
+    badge_en: 'Family',
+    badgeColor: 'bg-brand-blue',
+    inc_es: ['Delfines', 'Tiburones', 'Snorkel', 'Guía'],
+    inc_en: ['Dolphins', 'Sharks', 'Snorkel', 'Guide'],
+  },
+  {
+    nombre: 'Santo Domingo Tour',
+    dur_es: 'Día completo · 12h',
+    dur_en: 'Full day · 12h',
+    desc_es: 'Visita la Ciudad Colonial más antigua del continente, declarada Patrimonio de la Humanidad por la UNESCO.',
+    desc_en: 'Visit the oldest Colonial City in the continent, declared a UNESCO World Heritage Site.',
+    precio: '$85 USD',
+    imagen: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80',
+    badge_es: 'Cultural',
+    badge_en: 'Cultural',
+    badgeColor: 'bg-slate-600',
+    inc_es: ['Bus A/C', 'Guía', 'Almuerzo', 'Entradas'],
+    inc_en: ['A/C Bus', 'Guide', 'Lunch', 'Entry fees'],
+  },
+]
+---
+
+<section id="excursiones" class="py-14 sm:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-8 sm:mb-12 gap-2 sm:gap-3">
+      <div class="flex items-center gap-3">
+        <div class="h-px w-10 bg-brand-blue"></div>
+        <span data-i18n="exc_tag" class="text-[10px] font-black uppercase tracking-widest text-brand-blue">Aventura</span>
+        <div class="h-px w-10 bg-brand-blue"></div>
+      </div>
+      <h2 data-i18n="exc_title" class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+        Excursiones Imperdibles
+      </h2>
+      <p data-i18n="exc_subtitle" class="text-slate-500 dark:text-slate-400 font-medium max-w-xl text-sm sm:text-base">
+        Descubre la República Dominicana más allá del resort. Cada excursión incluye transporte desde tu hotel.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
+      {excursiones.map(({ nombre, dur_es, dur_en, desc_es, desc_en, precio, imagen, badge_es, badge_en, badgeColor, inc_es, inc_en }) => (
+        <div class="bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl shadow-md overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="relative h-44 sm:h-48 overflow-hidden shrink-0">
+            <img src={imagen} alt={nombre} loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span data-badge-es={badge_es} data-badge-en={badge_en}
+                class={`exc-badge ${badgeColor} text-white text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded-full`}>
+                {badge_es}
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white/90">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span data-dur-es={dur_es} data-dur-en={dur_en} class="exc-dur text-[10px] font-black">{dur_es}</span>
+            </div>
+          </div>
+
+          <div class="p-4 sm:p-6 flex flex-col gap-3 flex-1">
+            <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">{nombre}</h3>
+            <p data-desc-es={desc_es} data-desc-en={desc_en}
+              class="exc-desc text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium leading-relaxed flex-1">
+              {desc_es}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5">
+              {inc_es.map((item, i) => (
+                <span data-inc-es={item} data-inc-en={inc_en[i]}
+                  class="exc-inc flex items-center gap-1 text-[9px] font-black uppercase tracking-wider px-2 py-1 rounded-lg border border-brand-blue/20 text-brand-blue dark:text-brand-blue"
+                  style="background-color: rgba(27,155,209,0.08);">
+                  <svg class="w-2.5 h-2.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-700 mt-auto">
+              <div>
+                <span data-i18n="exc_pp" class="text-[9px] font-black uppercase tracking-widest text-slate-400">Por persona</span>
+                <div class="text-brand-orange font-black text-lg sm:text-xl">{precio}</div>
+              </div>
+              <a
+                href={`https://wa.me/18097654321?text=Hola%2C%20quiero%20reservar%20la%20excursi%C3%B3n%20${encodeURIComponent(nombre)}`}
+                target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-1.5 bg-brand-blue hover:bg-brand-blue-dark text-white px-3 sm:px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all active:scale-95"
+              >
+                <span data-i18n="exc_book">Reservar</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex justify-center mt-8 sm:mt-10">
+      <a
+        href="https://wa.me/18097654321?text=Hola%2C%20quiero%20ver%20m%C3%A1s%20excursiones%20disponibles"
+        target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 sm:px-8 py-3 rounded-2xl font-black text-sm transition-all active:scale-95"
+      >
+        <span data-i18n="exc_viewall">Ver todas las excursiones</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function updateExc(lang: string) {
+    document.querySelectorAll<HTMLElement>('.exc-badge').forEach(el => { el.textContent = lang === 'en' ? el.dataset.badgeEn! : el.dataset.badgeEs! })
+    document.querySelectorAll<HTMLElement>('.exc-dur').forEach(el => { el.textContent = lang === 'en' ? el.dataset.durEn! : el.dataset.durEs! })
+    document.querySelectorAll<HTMLElement>('.exc-desc').forEach(el => { el.textContent = lang === 'en' ? el.dataset.descEn! : el.dataset.descEs! })
+    document.querySelectorAll<HTMLElement>('.exc-inc').forEach(el => {
+      const svg = el.querySelector('svg')
+      el.textContent = lang === 'en' ? el.dataset.incEn! : el.dataset.incEs!
+      if (svg) el.prepend(svg)
+    })
+  }
+
+  document.addEventListener('DOMContentLoaded', () => updateExc(localStorage.getItem('lang') || 'es'))
+  document.addEventListener('langChange', (e: Event) => updateExc((e as CustomEvent).detail))
+</script>
