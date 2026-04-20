@@ -12,7 +12,7 @@ export const t = {
     // Hero
     hero_badge: 'Sede en Punta Cana · República Dominicana',
     hero_tag: 'Tu agencia de confianza',
-    hero_title: 'Punta Cana\nComo Nunca',
+    hero_title: 'Punta Cana Como Nunca',
     hero_subtitle: 'Hoteles todo incluido y excursiones inolvidables. Atención personalizada desde Punta Cana, precios directos sin intermediarios.',
     hero_stat1: '+50 Hoteles',
     hero_stat2: '+20 Excursiones',
@@ -74,7 +74,7 @@ export const t = {
 
     // CTA Final
     cta_tag: 'Empieza hoy',
-    cta_title: '¿Cuándo Viajamos\na Punta Cana?',
+    cta_title: '¿Cuándo Viajamos a Punta Cana?',
     cta_subtitle: 'Cuéntanos tus fechas, presupuesto y lo que buscas. En menos de 30 minutos tendrás tu cotización personalizada sin compromiso.',
     cta_check1: '✅ Cotización gratuita y sin compromiso',
     cta_check2: '✅ Confirmación inmediata con voucher',
@@ -128,7 +128,7 @@ export const t = {
 
     hero_badge: 'Based in Punta Cana · Dominican Republic',
     hero_tag: 'Your trusted travel agency',
-    hero_title: 'Punta Cana\nLike Never Before',
+    hero_title: 'Punta Cana Like Never Before',
     hero_subtitle: 'All-inclusive hotels and unforgettable excursions. Personalized service from Punta Cana, direct prices with no middlemen.',
     hero_stat1: '+50 Hotels',
     hero_stat2: '+20 Excursions',
@@ -184,7 +184,7 @@ export const t = {
     test_booked: 'Booked',
 
     cta_tag: 'Start today',
-    cta_title: 'When Are We Going\nto Punta Cana?',
+    cta_title: 'When Are We Going to Punta Cana?',
     cta_subtitle: 'Tell us your dates, budget and what you are looking for. You will have your personalized quote in under 30 minutes, no commitment.',
     cta_check1: '✅ Free quote with no commitment',
     cta_check2: '✅ Immediate confirmation with voucher',

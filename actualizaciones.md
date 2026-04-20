@@ -76,13 +76,18 @@ cocotal-travel/
 - Astro 4 + Tailwind CSS
 - Puerto inicial: 4323 (local only)
 
+### v0.2.1 — 2026-04-20
+**Bugfix sintaxis Astro**
+- Corregido `{'\n'}` en Hero.astro y CTAFinal.astro (no válido en templates Astro)
+- Actualizado `actualizaciones.md` con puerto real 4324
+
 ### v0.2.0 — 2026-04-20
 **i18n + Dark Mode + Mobile-first + Red**
 - Añadido toggle ES/EN en Navbar con sistema de traducciones propio (`src/i18n/translations.ts`)
 - Añadido toggle Dark/Light mode con persistencia en `localStorage`, sin flash al cargar
 - Refactorizados todos los componentes a mobile-first con breakpoints `sm:` / `md:` / `xl:`
 - Añadidas clases `dark:` en todos los componentes para soporte completo de dark mode
-- Servidor relanzado con `--host 0.0.0.0` — accesible en red local: `http://10.0.0.53:4323`
+- Servidor relanzado con `--host 0.0.0.0` — accesible en red local: `http://10.0.0.53:4324`
 - Inicializado repositorio Git
 
 ---
@@ -92,7 +97,7 @@ cocotal-travel/
 ```bash
 # Desarrollo (accesible en red)
 cd /home/adrianvx2/proyectos/cocotal-travel
-npm run dev -- --host --port 4323
+npm run dev -- --host --port 4324
 
 # Build para producción
 npm run build
