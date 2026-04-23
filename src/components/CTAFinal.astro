@@ -18,14 +18,21 @@
       <p data-i18n="cta_subtitle" class="text-slate-300 font-medium leading-relaxed text-sm sm:text-base">
         Cuéntanos tus fechas, presupuesto y lo que buscas. En menos de 30 minutos tendrás tu cotización personalizada sin compromiso.
       </p>
-      <div class="flex flex-col gap-2">
-        {(['cta_check1','cta_check2','cta_check3','cta_check4'] as const).map(k => (
-          <span data-i18n={k} class="text-slate-300 text-xs sm:text-sm font-medium">
-            {k === 'cta_check1' ? '✅ Cotización gratuita y sin compromiso'
-             : k === 'cta_check2' ? '✅ Confirmación inmediata con voucher'
-             : k === 'cta_check3' ? '✅ Soporte 24/7 durante todo tu viaje'
-             : '✅ Los mejores precios de Punta Cana'}
-          </span>
+      <div class="flex flex-col gap-2.5">
+        {[
+          ['cta_check1', 'Cotización gratuita y sin compromiso'],
+          ['cta_check2', 'Confirmación inmediata con voucher'],
+          ['cta_check3', 'Soporte 24/7 durante todo tu viaje'],
+          ['cta_check4', 'Los mejores precios de Punta Cana'],
+        ].map(([key, text]) => (
+          <div class="flex items-center gap-2.5">
+            <div class="w-5 h-5 rounded-full bg-brand-orange/25 flex items-center justify-center shrink-0">
+              <svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span data-i18n={key} class="text-slate-300 text-xs sm:text-sm font-medium">{text}</span>
+          </div>
         ))}
       </div>
       <a

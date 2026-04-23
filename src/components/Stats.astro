@@ -1,18 +1,40 @@
 ---
 const stats = [
-  { value: '+500', key: 'stat_clients', fallback: 'Clientes Felices', icon: '😊' },
-  { value: '+50',  key: 'stat_hotels',  fallback: 'Hoteles Aliados',  icon: '🏨' },
-  { value: '+20',  key: 'stat_excursions', fallback: 'Excursiones',   icon: '🚤' },
-  { value: '10+',  key: 'stat_years',   fallback: 'Años de Experiencia', icon: '🌴' },
+  {
+    value: '+500',
+    key: 'stat_clients',
+    fallback: 'Clientes Felices',
+    iconSvg: `<svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  },
+  {
+    value: '+50',
+    key: 'stat_hotels',
+    fallback: 'Hoteles Aliados',
+    iconSvg: `<svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+  },
+  {
+    value: '+20',
+    key: 'stat_excursions',
+    fallback: 'Excursiones',
+    iconSvg: `<svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>`,
+  },
+  {
+    value: '10+',
+    key: 'stat_years',
+    fallback: 'Años de Experiencia',
+    iconSvg: `<svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
+  },
 ]
 ---
 <section class="py-8 sm:py-10 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6">
-    {stats.map(({ value, key, fallback, icon }) => (
-      <div class="flex flex-col items-center gap-1 text-center">
-        <span class="text-xl sm:text-2xl">{icon}</span>
+    {stats.map(({ value, key, fallback, iconSvg }) => (
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="w-10 h-10 rounded-xl bg-brand-blue/8 dark:bg-brand-blue/15 flex items-center justify-center">
+          <Fragment set:html={iconSvg} />
+        </div>
         <span class="text-2xl sm:text-3xl font-black text-brand-blue">{value}</span>
-        <span data-i18n={key} class="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
+        <span data-i18n={key} class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
           {fallback}
         </span>
       </div>

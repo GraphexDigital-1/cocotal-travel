@@ -70,6 +70,19 @@ cocotal-travel/
 
 ## Historial de Versiones
 
+### v0.3.0 — 2026-04-23
+**Rediseño visual — menos IA, más profesional**
+- **Hero**: eliminado gradiente tricolor del H1 (blanco→naranja→azul), ahora texto blanco sólido. Removido dot pulsante del badge. Stats pills con iconos SVG en vez de emojis.
+- **Stats**: emojis (😊🏨🚤🌴) reemplazados por iconos SVG dentro de contenedores con fondo `brand-blue/10`.
+- **PorQueElegirnos**: iconos emoji (📍💰📲✅🎯🌴) reemplazados por SVGs con contenedor naranja. Banner CTA eliminó gradiente azul→naranja, ahora fondo `slate-900` sólido.
+- **CTAFinal**: checklist con ✅ emoji reemplazado por iconos SVG check con círculo naranja.
+- **Footer**: iconos de contacto (📍📲✉️🕐) reemplazados por SVG. Eliminado 🌴 del copyright.
+- **Navbar**: toggle dark mode usa icono SVG luna/sol en vez de emoji.
+- **Layout**: `toggleDark()` actualizado a `innerHTML` para soportar SVG icons dinámicos.
+- **astro.config.mjs**: añadido `vite.server.allowedHosts: true` para acceso por hostname externo (túnel Cloudflare).
+
+
+
 ### v0.1.0 — 2026-04-20
 **Creación inicial del proyecto**
 - Landing page completa con 9 secciones: Navbar, Hero, Stats, Hoteles, Excursiones, PorQueElegirnos, Testimonios, CTAFinal, Footer
